@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMINACORE - Collaborate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="collaborate.css" />
+   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+  <div class="logo">
+    <img class="imge" src="luminacoreLogo.jpg" height="30px" width="30px">
+    LUMINACORE
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="collaborate.html">Collaborate</a></li>
+    <li><a href="practice.html">Practice</a></li>
+    <li><a href="certify.html">Certify</a></li>
+    <li><a href="ai.html">AI Tools</a></li>
+    <li><a href="attendance.html"><i class="fa-solid fa-clipboard-check"></i> Attendance</a></li>
+  </ul>
+
+  <div class="nav-icons">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user-circle"></i>
+  </div>
+
+</nav>
+
+  <!-- Hero Section -->
+  <div class="collab-hero">
+    <div class="hero-content">
+      <h1>Collaborate & Grow Together</h1>
+      <p>Join forces with other learners, share insights, and build real-world SAP projects.</p>
+      <button id="joinCommunityBtn">Join the Community</button>
+    </div>
+  </div>
+
+  <!-- Collaboration Features -->
+  <div class="section">
+    <h2>Collaboration Opportunities</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>💬 Discussion Boards</h3>
+        <p>Engage in topic-specific discussions and exchange knowledge with peers.</p>
+        <button class="feature-btn" data-feature="discussion">Enter Forum</button>
+      </div>
+
+      <div class="card">
+        <h3>👥 Project Teams</h3>
+        <p>Find partners for SAP-based mini-projects, hackathons, and research work.</p>
+        <button class="feature-btn" data-feature="projects">Find Team</button>
+      </div>
+
+      <div class="card">
+        <h3>🎓 Mentor Connect</h3>
+        <p>Get guidance from industry experts and academic mentors on your projects.</p>
+        <button class="feature-btn" data-feature="mentors">Connect</button>
+      </div>
+
+      <div class="card">
+        <h3>📅 Events & Webinars</h3>
+        <p>Participate in live sessions, SAP summits, and innovation challenges.</p>
+        <button class="feature-btn" data-feature="events">View Events</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Display Area -->
+  <div id="featureContainer" class="feature-container">
+    <h2 id="featureTitle">Welcome to Collaboration Space</h2>
+    <div id="featureContent" class="feature-content">
+      <p>Select a feature above to see more details and interact with other learners.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 LUMINACORE | Learn. Collaborate. Excel.
+  </div>
+
+  <script src="collaborate.js">
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

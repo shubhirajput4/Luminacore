@@ -1,0 +1,121 @@
+/* Hero Section */
+.collab-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+              url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80') center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.collab-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.collab-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.collab-hero button {
+  padding: 10px 25px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.collab-hero button:hover {
+  background-color: #ffe45e;
+}
+
+/* Collaboration Features */
+.section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Dynamic Display Section */
+.feature-container {
+  background: #f8f8f8;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.feature-container h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feature-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.feature-content p {
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}

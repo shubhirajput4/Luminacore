@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Virtual Classroom</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+<body>
+
+<a-scene vr-mode-ui="enabled: true">
+
+  <!-- Sky / Background -->
+  <a-sky color="#dfe6e9"></a-sky>
+
+  <!-- Floor -->
+  <a-plane 
+    rotation="-90 0 0" 
+    width="20" 
+    height="20" 
+    color="#f1f1f1">
+  </a-plane>
+
+  <!-- Ceiling -->
+  <a-plane 
+    position="0 5 0" 
+    rotation="90 0 0" 
+    width="20" 
+    height="20" 
+    color="#ffffff">
+  </a-plane>
+
+  <!-- Walls -->
+  <a-plane position="0 2.5 -10" width="20" height="5" color="#2c3e50"></a-plane>
+  <a-plane position="-10 2.5 0" rotation="0 90 0" width="20" height="5" color="#34495e"></a-plane>
+  <a-plane position="10 2.5 0" rotation="0 -90 0" width="20" height="5" color="#34495e"></a-plane>
+
+  <!-- Blackboard -->
+  <a-plane 
+    position="0 2 -9.9" 
+    width="6" 
+    height="2.5" 
+    color="#0b3d2e">
+  </a-plane>
+
+  <a-text 
+    value="Welcome to VR Classroom"
+    position="0 3.4 -9.8"
+    align="center"
+    color="#ffffff">
+  </a-text>
+
+  <!-- Teacher -->
+  <a-sphere 
+    position="0 1.6 -6" 
+    radius="0.4" 
+    color="orange">
+  </a-sphere>
+
+  <a-cylinder 
+    position="0 0.9 -6" 
+    radius="0.25" 
+    height="1.2" 
+    color="#ffcc80">
+  </a-cylinder>
+
+  <a-text 
+    value="Teacher"
+    position="0 2.4 -6"
+    align="center"
+    color="#000">
+  </a-text>
+
+  <!-- Student Benches -->
+  <a-box position="-2 0.5 3" width="1.6" height="1" depth="1" color="#3498db"></a-box>
+  <a-box position="0 0.5 3"  width="1.6" height="1" depth="1" color="#3498db"></a-box>
+  <a-box position="2 0.5 3"  width="1.6" height="1" depth="1" color="#3498db"></a-box>
+
+  <!-- Student Heads -->
+  <a-sphere position="-2 1.5 3" radius="0.25" color="#2980b9"></a-sphere>
+  <a-sphere position="0 1.5 3" radius="0.25" color="#2980b9"></a-sphere>
+  <a-sphere position="2 1.5 3" radius="0.25" color="#2980b9"></a-sphere>
+
+  <!-- Camera (YOU = Student POV) -->
+  <a-entity position="0 1.6 6">
+    <a-camera look-controls wasd-controls></a-camera>
+  </a-entity>
+
+</a-scene>
+
+</body>
+</html>

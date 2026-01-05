@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINACORE - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+ <nav class="navbar">
+  <div class="logo">
+    <img class="imge" src="luminacoreLogo.jpg" height="30px" width="30px">
+    LUMINACORE
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="collaborate.html">Collaborate</a></li>
+    <li><a href="practice.html">Practice</a></li>
+    <li><a href="certify.html">Certify</a></li>
+    <li><a href="ai.html">AI Tools</a></li>
+    <li><a href="attendance.html"><i class="fa-solid fa-clipboard-check"></i> Attendance</a></li>
+  </ul>
+   
+   <div class="nav-icons">
+     <a href="sign_up.html">Sign Up</a><br>
+     <a href="sign_in.html">Sign In</a>
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user-circle"></i>
+  </div>
+
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to <span>LUMINACORE</span></h1>
+      <p>Empowering learners to master SAP through learning, practice, and certification.</p>
+      <button id="getStartedBtn">Get Started</button>  
+    </div>
+
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="features">
+    <h2>Explore What You Can Do</h2>
+    <div class="feature-container">
+      <div class="feature-card" onclick="goTo('learn.html')">
+        <h3>📘 Learn</h3>
+        <p>Access tutorials, videos, and courses to build SAP knowledge.</p>
+        <button>Go to Learn</button>
+      </div>
+
+      <div class="feature-card" onclick="goTo('collaborate.html')">
+        <h3>🤝 Collaborate</h3>
+        <p>Join forums, share knowledge, and connect with other learners.</p>
+        <button>Join Now</button>
+      </div>
+
+      <div class="feature-card" onclick="goTo('practice.html')">
+        <h3>💻 Practice</h3>
+        <p>Test your skills with hands-on exercises and SAP scenarios.</p>
+        <button>Start Practicing</button>
+      </div>
+
+      <div class="feature-card" onclick="goTo('certify.html')">
+        <h3>🎓 Certify</h3>
+        <p>Take certification tests to earn your official LUMINACORE certificate.</p>
+        <button>Get Certified</button>
+      </div>
+
+      <div class="feature-card" onclick="goTo('explore.html')">
+        <h3>📰Explore</h3>
+        <p>Keep up with the latest SAP updates, trends, and best practices.</p>
+        <button>Stay Updated</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About LUMINACORE</h2>
+    <p>
+      LUMINACORE is your one-stop SAP learning platform that combines learning,
+      collaboration, and certification in one place. Our goal is to help learners 
+      grow from beginners to professionals with structured, hands-on resources.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 LUMINACORE | Learn. Practice. Excel.
+  </footer>
+
+  <script src="home.js">
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

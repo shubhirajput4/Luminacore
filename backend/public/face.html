@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Face Attendance</title>
+</head>
+<body>
+
+<h2>Face Attendance</h2>
+
+<video id="video" width="300" autoplay></video>
+<br><br>
+<button onclick="capture()">Mark Attendance</button>
+<canvas id="canvas" width="300" height="200" style="display:none"></canvas>
+
+<script>
+  const video = document.getElementById("video");
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => video.srcObject = stream);
+
+  function capture() {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    const image = canvas.toDataURL("image/png");
+
+    fetch("/api/attendance/mark", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: "student001",
+        image: image
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      alert(data.message || "Attendance Marked");
+    });
+  }
+</script>
+
+</body>
+</html>

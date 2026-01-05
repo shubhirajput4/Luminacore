@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools - Luminacore</title>
+  <link rel="stylesheet" href="ai.css">
+  <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+   <nav class="navbar">
+  <div class="logo">
+    <img class="imge" src="luminacoreLogo.jpg" height="30px" width="30px">
+    LUMINACORE
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="collaborate.html">Collaborate</a></li>
+    <li><a href="practice.html">Practice</a></li>
+    <li><a href="certify.html">Certify</a></li>
+    <li><a href="ai.html">AI Tools</a></li>
+    <li><a href="attendance.html"><i class="fa-solid fa-clipboard-check"></i> Attendance</a></li>
+  </ul>
+
+   <div class="nav-icons">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user-circle"></i>
+  </div>
+
+</nav>
+
+
+
+  <section class="ai-container">
+    <!-- Dark Mode Toggle -->
+    <h1>AI Learning Assistant 🤖</h1>
+    <p>Use AI tools to chat, summarize, and generate quizzes!</p>
+
+    <div class="ai-tools">
+      <button onclick="openTool('chatbot')" title="Talk to AI">AI Chatbot</button>
+      <button onclick="openTool('summary')" title="Summarize text">AI Summary</button>
+      <button onclick="openTool('quiz')" title="Generate quiz">AI Quiz Generator</button>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="ai-tool">
+      <h2>AI Chatbot</h2>
+      <textarea id="chatInput" placeholder="Ask me anything..."></textarea>
+      <button onclick="askAI('chat')">Ask</button>
+      <div id="chatOutput"></div>
+      <button onclick="copyOutput('chatOutput')">📋 Copy</button>
+    </div>
+
+    <!-- Summary -->
+    <div id="summary" class="ai-tool" style="display:none;">
+      <h2>AI Summary Tool</h2>
+      <textarea id="summaryInput" placeholder="Paste your text here..."></textarea>
+      <button onclick="askAI('summary')">Summarize</button>
+      <div id="summaryOutput"></div>
+      <button onclick="copyOutput('summaryOutput')">📋 Copy</button>
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz" class="ai-tool" style="display:none;">
+      <h2>AI Quiz Generator</h2>
+      <textarea id="quizInput" placeholder="Enter topic for quiz (e.g., SAP ERP)..."></textarea>
+      <button onclick="askAI('quiz')">Generate Quiz</button>
+      <!-- Progress Bar -->
+<div id="quizProgress" class="progress-container" style="display:none;">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+      <div id="quizOutput"></div>
+      <button onclick="copyOutput('quizOutput')">📋 Copy</button>
+    </div>
+  </section>
+
+  <script src="ai.js">
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

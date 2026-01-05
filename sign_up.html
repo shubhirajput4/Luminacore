@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Smart Parking System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sign_up.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <nav class="navbar">
+      <div class="logo">
+        <img class="imge" src="luminacoreLogo.jpg" height="30px" width="30px">
+        LUMINACORE
+      </div>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="collaborate.html">Collaborate</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="certify.html">Certify</a></li>
+        <li><a href="ai.html">AI Tools</a></li>
+        <li><a href="attendance.html"><i class="fa-solid fa-clipboard-check"></i> Attendance</a></li>
+      </ul>
+       
+      <div class="nav-icons">
+        <a href="sign_up.html">Sign Up</a><br>
+        <a href="sign_in.html">Sign In</a>
+        <i class="fas fa-search"></i>
+        <i class="fas fa-user-circle"></i>
+      </div>
+    </nav>
+
+    <main>
+        <section id="sign-up">
+            <h2>Sign Up</h2>
+
+            <!-- ⭐ FORM START -->
+            <form id="signupForm">
+              
+              <label for="username">Username:</label>
+              <input type="text" id="username" required><br><br>
+
+              <label for="phone_no">Phone Number:</label>
+              <input type="tel" id="phone_no" required pattern="[0-9]{10}"><br><br>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" required><br><br>
+
+              <label for="password">Password:</label>
+              <input type="password" id="password" required minlength="8"><br><br>
+
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirm-password" required minlength="8"><br><br>
+
+              <!-- ⭐ BUTTON ADDED -->
+              <button type="button" onclick="signupUser()">Sign Up</button>
+
+            </form>
+            <!-- ⭐ FORM END -->
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2023 Amazone clone</p>
+    </footer>
+
+
+<script>
+function signupUser() {
+
+    // Password Match Check
+    if (document.getElementById("password").value !== 
+        document.getElementById("confirm-password").value) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    const data = {
+        username: document.getElementById("username").value,
+        phone: document.getElementById("phone_no").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
+    };
+
+    fetch("http://127.0.0.1:5000/signup", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message);
+
+        if (data.success === true) {
+            window.location.href = "sign_in.html";
+        }
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Attendance QR</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #0f172a;
+      font-family: Arial;
+    }
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      width: 320px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>📸 Attendance QR</h2>
+    <div id="qrcode"></div>
+    <p>Scan within 1 minute</p>
+  </div>
+
+<script>
+  const token = "CLASS-" + Date.now();
+
+  new QRCode(document.getElementById("qrcode"), {
+    text: `http://localhost:5000/scan.html?token=${token}`,
+    width: 220,
+    height: 220
+  });
+
+  // QR auto refresh after 1 min
+  setTimeout(() => location.reload(), 60000);
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LUMINACORE – Dashboard</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="dashboard.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+  <!-- ================= HEADER ================= -->
+  <div class="header simple-header">
+
+    <div class="welcome-inline">
+
+      <!-- Profile Photo -->
+      <label for="profileUpload" class="profile-pic-wrapper">
+        <img id="headerProfilePic" src="assets/default-avatar.png" alt="Profile">
+      </label>
+      <input type="file" id="profileUpload" accept="image/*" hidden>
+
+      <!-- Welcome Text -->
+      <div class="welcome-text">
+        <h1>👋 Welcome, <span id="username">Shubhi0411</span></h1>
+        <p>Your learning journey starts here</p>
+
+        <!-- ===== QR ATTENDANCE BUTTONS ===== -->
+       
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= CARDS ================= -->
+  <div class="cards">
+
+    <div class="card" onclick="go('learn.html')">
+      <i class="fas fa-book"></i>
+      <h3>My Courses</h3>
+    </div>
+
+    <div class="card" onclick="go('practice.html')">
+      <i class="fas fa-code"></i>
+      <h3>Practice</h3>
+    </div>
+
+ <div class="card" onclick="goAttendance()">
+    <i class="fas fa-calendar-check"></i>
+    <h3>Attendance</h3>
+  </div>
+
+    <div class="card" onclick="go('ai.html')">
+      <i class="fas fa-robot"></i>
+      <h3>AI Tools</h3>
+    </div>
+
+  </div>
+
+  <!-- ================= ANNOUNCEMENTS ================= -->
+  <div class="card announcement-card" onclick="toggleAnnouncements()">
+    <i class="fas fa-bullhorn"></i>
+    <h3>Announcements</h3>
+  </div>
+
+  <div id="announcementsPanel" class="announcements hidden">
+    <h3>📢 Latest Announcements</h3>
+    <ul id="announcementList"></ul>
+  </div>
+<div class="card" onclick="go('vr-classroom.html')">
+  🥽 Virtual Classroom
+</div>
+  <!-- ================= ATTENDANCE SUMMARY ================= -->
+  <div class="attendance-box">
+    <h3>📅 Attendance (Smart)</h3>
+    <span>✅ Present: <b id="presentCount">0</b></span>
+    <span>❌ Absent: <b id="absentCount">0</b></span>
+    <span>📊 Attendance: <b id="attendancePercent">0%</b></span>
+  </div>
+
+  <!-- ================= QUICK LINKS ================= -->
+  <div class="quick-links">
+    <div onclick="location.href='http://localhost:5000/live.html'">🎥 Live Class</div>
+    <div onclick="location.href='http://localhost:5000/chat.html'">💬 Chat</div>
+    <div onclick="location.href='http://localhost:5000/payment.html'">💳 Payment</div>
+  </div>
+
+
+  <!-- ================= LOGOUT ================= -->
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+</div>
+
+<!-- ================= JS ================= -->
+<script src="dashboard.js"></script>
+
+
+
+</body>
+
+
+</html>

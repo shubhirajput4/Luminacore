@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Buy Course | LuminaCore</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 380px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  animation: fade 0.6s ease;
+}
+
+@keyframes fade {
+  from {opacity:0; transform:translateY(20px)}
+  to {opacity:1; transform:translateY(0)}
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.price {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #00e5ff;
+}
+
+.features {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.features li {
+  margin: 8px 0;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00e5ff, #2979ff);
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,229,255,0.4);
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>🚀 Full Stack Course</h1>
+
+  <div class="price">₹499</div>
+
+  <ul class="features">
+    <li>✔ Live Classes</li>
+    <li>✔ Practice & Projects</li>
+    <li>✔ Certificate</li>
+    <li>✔ Lifetime Access</li>
+  </ul>
+
+  <button onclick="payNow()">Pay ₹499</button>
+
+  <div class="note">Secure payment via Razorpay</div>
+</div>
+
+<script>
+function payNow() {
+fetch("http://localhost:5000/create-order", { method: "POST" })
+
+    .then(res => res.json())
+    .then(order => {
+      const options = {
+        key: "rzp_test_1234567890",   // 👈 TEST KEY
+        amount: order.amount,
+        currency: "INR",
+        name: "LuminaCore",
+        description: "Course Purchase",
+        order_id: order.id,
+        handler: function (response) {
+          alert("✅ Payment Successful!");
+          console.log(response);
+        },
+        theme: {
+          color: "#00e5ff"
+        }
+      };
+      const rzp = new Razorpay(options);
+      rzp.open();
+    });
+}
+</script>
+
+</body>
+</html>

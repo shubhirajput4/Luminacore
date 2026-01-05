@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINACORE - Certification</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="certify.css">
+   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="logo">
+    <img class="imge" src="luminacoreLogo.jpg" height="30px" width="30px">
+    LUMINACORE
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="collaborate.html">Collaborate</a></li>
+    <li><a href="practice.html">Practice</a></li>
+    <li><a href="certify.html">Certify</a></li>
+    <li><a href="ai.html">AI Tools</a></li>
+    <li><a href="attendance.html"><i class="fa-solid fa-clipboard-check"></i> Attendance</a></li>
+  </ul>
+
+  <div class="nav-icons">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user-circle"></i>
+  </div>
+
+</nav>
+
+  <!-- Hero Section -->
+  <section class="certify-hero">
+    <div class="hero-content">
+      <h1>Earn Your SAP Certification</h1>
+      <p>Attempt the certification quiz, score 80% or above, and unlock your digital certificate.</p>
+      <button id="startExamBtn">Start Exam</button>
+    </div>
+    <div class="extra-content">
+  <!-- Benefits List -->
+  <ul class="benefits-list">
+    <li>✔️ Validate your SAP skills</li>
+    <li>✔️ Boost your career prospects</li>
+    <li>✔️ Get a shareable digital certificate</li>
+  </ul>
+
+  <!-- Testimonial -->
+  <blockquote class="testimonial">
+    “This certification helped me land my first SAP role!” – Priya S., SAP Analyst
+  </blockquote>
+
+  <!-- Badge Preview -->
+  <div class="badge-preview">
+    <img src="https://via.placeholder.com/100x100.png?text=SAP+Badge" alt="SAP Certified Badge">
+    <p>Earn this badge upon passing!</p>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq">
+    <details>
+      <summary>What is the passing score?</summary>
+      <p>You need 80% or above to pass.</p>
+    </details>
+    <details>
+      <summary>Is the certificate free?</summary>
+      <p>Yes, it's free for learners using LUMINACORE.</p>
+    </details>
+    <details>
+      <summary>Can I retake the exam?</summary>
+      <p>Yes, you can retry anytime until you pass.</p>
+    </details>
+  </div>
+
+  <!-- Countdown Timer -->
+  <div id="timer" class="countdown">
+    ⏳ Session expires in: <span id="timeLeft">03:00</span>
+  </div>
+</div>
+  </section>
+
+  <!-- Exam Section -->
+  <section id="examSection" class="exam-section hidden">
+    <h2>🧾 Certification Exam</h2>
+    <form id="examForm">
+      <div class="question">
+        <p><strong>Q1:</strong> What is the main purpose of SAP ERP?</p>
+        <label><input type="radio" name="q1" value="a"> To manage enterprise resources</label><br>
+        <label><input type="radio" name="q1" value="b"> To edit images</label><br>
+        <label><input type="radio" name="q1" value="c"> To browse the internet</label>
+      </div>
+
+      <div class="question">
+        <p><strong>Q2:</strong> Which SAP module handles sales and distribution?</p>
+        <label><input type="radio" name="q2" value="a"> SAP HR</label><br>
+        <label><input type="radio" name="q2" value="b"> SAP SD</label><br>
+        <label><input type="radio" name="q2" value="c"> SAP FICO</label>
+      </div>
+
+      <div class="question">
+        <p><strong>Q3:</strong> What database is commonly used with SAP HANA?</p>
+        <label><input type="radio" name="q3" value="a"> Oracle</label><br>
+        <label><input type="radio" name="q3" value="b"> MySQL</label><br>
+        <label><input type="radio" name="q3" value="c"> In-memory database</label>
+      </div>
+
+      <div class="question">
+        <p><strong>Q4:</strong> What does the “FI” in SAP FICO stand for?</p>
+        <label><input type="radio" name="q4" value="a"> Financial Integration</label><br>
+        <label><input type="radio" name="q4" value="b"> Financial Accounting</label><br>
+        <label><input type="radio" name="q4" value="c"> Fiscal Input</label>
+      </div>
+
+      <div class="question">
+        <p><strong>Q5:</strong> SAP is mainly used by which type of organizations?</p>
+        <label><input type="radio" name="q5" value="a"> Educational institutions</label><br>
+        <label><input type="radio" name="q5" value="b"> Enterprise-level businesses</label><br>
+        <label><input type="radio" name="q5" value="c"> Individual users</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Exam</button>
+    </form>
+    <p id="resultDisplay"></p>
+  </section>
+
+  <!-- Certificate Section -->
+  <section id="certificateSection" class="certificate-section hidden">
+    <h2>🎉 Congratulations!</h2>
+    <p>You’ve successfully passed the LUMINACORE SAP Certification Exam.</p>
+    <div class="certificate-box">
+      <h3>Certificate of Achievement</h3>
+      <p>This certifies that <strong id="certifiedName">[Your Name]</strong> has completed the SAP Basics Exam.</p>
+      <p><em>Date: <span id="certDate"></span></em></p>
+      <button id="downloadCertBtn">Download Certificate</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 LUMINACORE | Empowering Learners Worldwide.
+  </footer>
+
+  <script src="certify.js">
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

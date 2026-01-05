@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mark Attendance</title>
+
+  <style>
+    body {
+      background: #f4f6fb;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 12px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #msg {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h3>📸 Face Attendance</h3>
+
+  <video id="video" autoplay></video>
+  <canvas id="canvas" width="300" height="220" style="display:none;"></canvas>
+
+  <button onclick="clickPhoto()">📸 Click Photo & Mark Attendance</button>
+
+  <p id="msg"></p>
+</div>
+
+<script>
+  const video = document.getElementById("video");
+  const canvas = document.getElementById("canvas");
+  const msg = document.getElementById("msg");
+
+  // 🔹 Camera ON
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => video.srcObject = stream)
+    .catch(() => msg.innerText = "❌ Camera access denied");
+
+  async function clickPhoto() {
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    const image = canvas.toDataURL("image/png");
+
+    msg.innerText = "⏳ Verifying face...";
+
+    const res = await fetch("/api/attendance/mark", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ image })
+    });
+
+    const data = await res.json();
+    msg.innerText = data.message;
+  }
+</script>
+
+</body>
+</html>

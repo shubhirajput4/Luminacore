@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINACORE - Learn</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="learn.css"> 
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+  <div class="logo">
+    <img class="imge" src="luminacoreLogo.jpg" height="30px" width="30px">
+    LUMINACORE
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="collaborate.html">Collaborate</a></li>
+    <li><a href="practice.html">Practice</a></li>
+    <li><a href="certify.html">Certify</a></li>
+    <li><a href="ai.html">AI Tools</a></li>
+    <li><a href="attendance.html"><i class="fa-solid fa-clipboard-check"></i> Attendance</a></li>
+  </ul>
+
+   <div class="nav-icons">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user-circle"></i>
+  </div>
+
+</nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Build your SAP knowledge step-by-step</h1>
+      <p>Explore guided learning paths, hands-on tutorials, and expert video sessions designed to strengthen your SAP skills from beginner to advanced levels.</p>
+      <button onclick="showVideos()">Start Learning</button>
+    </div>
+  </div>
+
+  <!-- Learning Cards -->
+  <div class="section">
+    <h2>Explore Learning Paths</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🌱 Beginner Level</h3>
+        <p>Learn SAP basics, navigation, and system overview for a strong foundation.</p>
+        <button onclick="showVideos()">Learn Now</button>
+      </div>
+
+      <div class="card">
+        <h3>⚙️ Intermediate Level</h3>
+        <p>Understand modules like SAP FICO, MM, and SD through practical examples.</p>
+        <button onclick="showVideos()">Explore</button>
+      </div>
+
+      <div class="card">
+        <h3>🚀 Advanced Level</h3>
+        <p>Work on automation, integrations, and real-time data analysis using SAP tools.</p>
+        <button onclick="showVideos()">Advance</button>
+      </div>
+
+      <div class="card">
+        <h3>🧠 Knowledge Quizzes</h3>
+        <p>Test your understanding after every topic and track your learning progress.</p>
+        <button onclick="showVideos()">Take Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Section (Hidden by default) -->
+  <div class="video-section" id="videoSection">
+    <h2>🎥 SAP Learning Videos</h2>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=25_iS6FrdTXyyIsY?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/UrsmFxEIp5k?si=mf0x6bO3ZIfh4pBC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/eIrMbAQSU34?si=fRFEQRVUIhFtJ2Az" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5OdVJbNCSso?si=UhMs5U0MrcTjOrEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/HeW-D6KpDwY?si=LMpB0Sr0Fl1xJV93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PkZNo7MFNFg?si=RraF3P-cQ4T18ZvS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <button class="video-close" onclick="hideVideos()">Close Videos</button>
+  </div>
+</div>
+  <!-- Progress Tracker -->
+  <div class="progress-section">
+    <h2>Your Learning Progress</h2>
+    <div class="progress-bar">
+      <div class="progress" id="progressBar"></div>
+    </div>
+    <p class="progress-text" id="progressText">0% Completed</p>
+  </div>
+
+  <!-- Certificate Badge -->
+  <div class="certificate">
+    <h2>Earn Your Certificate</h2>
+    <p>Complete all modules and earn a verified certificate of achievement from LUMINACORE.</p>
+    <div class="badge">🏅 Certified Learner</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 LUMINACORE | Learn. Practice. Excel.
+  </div>
+
+  <script src="learn.js">
+   
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Hero Section */
+.practice-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+              url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80') center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.practice-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.practice-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.practice-hero button {
+  padding: 10px 25px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.practice-hero button:hover {
+  background-color: #4dd0e1;
+}
+
+/* Practice Modes */
+.section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Dynamic Area */
+.practice-container {
+  background: #f8f8f8;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.practice-container h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.practice-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.quiz-question {
+  margin: 15px 0;
+  text-align: left;
+}
+
+.quiz-question button {
+  margin-top: 8px;
+  display: block;
+}
+
+.coding-area textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.coding-area button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.coding-area button:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}

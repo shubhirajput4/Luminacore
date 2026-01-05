@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMINACORE - Practice</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="practice.css" />
+   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+   <nav class="navbar">
+  <div class="logo">
+    <img class="imge" src="luminacoreLogo.jpg" height="30px" width="30px">
+    LUMINACORE
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="learn.html">Learn</a></li>
+    <li><a href="collaborate.html">Collaborate</a></li>
+    <li><a href="practice.html">Practice</a></li>
+    <li><a href="certify.html">Certify</a></li>
+    <li><a href="ai.html">AI Tools</a></li>
+    <li><a href="attendance.html"><i class="fa-solid fa-clipboard-check"></i> Attendance</a></li>
+  </ul>
+
+  <div class="nav-icons">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-user-circle"></i>
+  </div>
+
+</nav>
+
+
+  <!-- Hero Section -->
+  <div class="practice-hero">
+    <div class="hero-content">
+      <h1>Sharpen Your Skills with Hands-on Practice</h1>
+      <p>Take quizzes, solve challenges, and test your SAP knowledge through real scenarios.</p>
+      <button id="startPracticeBtn">Start Practicing</button>
+    </div>
+  </div>
+
+  <!-- Practice Modes -->
+  <div class="section">
+    <h2>Choose Your Practice Mode</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🧠 Quiz Mode</h3>
+        <p>Test your SAP fundamentals through quick multiple-choice questions.</p>
+        <button class="practice-btn" data-mode="quiz">Start Quiz</button>
+      </div>
+
+      <div class="card">
+        <h3>💻 Coding Challenges</h3>
+        <p>Try beginner-friendly coding tasks related to SAP logic and automation.</p>
+        <button class="practice-btn" data-mode="coding">Solve Challenge</button>
+      </div>
+
+      <div class="card">
+        <h3>📈 Case Scenarios</h3>
+        <p>Work on real-time SAP case studies and business logic simulations.</p>
+        <button class="practice-btn" data-mode="case">View Case</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Practice Content Area -->
+  <div id="practiceContainer" class="practice-container">
+    <h2 id="practiceTitle">Select a Practice Mode</h2>
+    <div id="practiceContent" class="practice-content">
+      <p>Click any practice mode above to begin your learning journey.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 LUMINACORE | Learn. Practice. Excel.
+  </div>
+
+  <script src="practice.js">
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

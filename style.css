@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #222;
+} 
+/* BASIC NAVBAR STYLE */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
+  background: #000;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #8fd3ff;
+}
+
+.logo img {
+  margin-right: 8px;
+  border-radius: 50%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #dff3ff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-icons i {
+  font-size: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* HAMBURGER ICON (MOBILE) */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* =============== RESPONSIVE SECTION =============== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-icons {
+    display: none; /* Hide search & profile on mobile */
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+}
+
+/* Profile Dropdown Container */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: #111;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  border: 1px solid #222;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdown-menu a {
+  color: #dff3ff;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #1a1a1a;
+}
+
+/* Show Dropdown When Active */
+.profile-dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* Mobile support */
+@media (max-width: 768px) {
+  .profile-dropdown {
+    display: block;
+  }
+}
+
+/* Footer */
+
+  footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 13px;
+    }
+
+
+  

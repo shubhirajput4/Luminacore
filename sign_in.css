@@ -1,0 +1,88 @@
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0a0f1f, #1c2b3a);
+    min-height: 100vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#sign-in {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 40px 35px;
+    border-radius: 16px;
+    width: 380px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+#sign-in h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #71c4ff;
+}
+
+#sign-in label {
+    display: block;
+    text-align: left;
+    margin-bottom: 
+    font-size 15px;
+    font-weight: 500;
+}
+
+#sign-in input[type="text"],
+#sign-in input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.17);
+    color: #e6f7ff;
+    font-size: 15px;
+}
+
+#sign-in input[type="text"]::placeholder,
+#sign-in input[type="password"]::placeholder {
+    color: #c8eaff;
+}
+
+#sign-in input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #53b8ff;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#sign-in input[type="submit"]:hover {
+    background: #82d4ff;
+    transform: translateY(-2px);
+}
+
+#sign-in p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#sign-in a {
+    color: #91d4ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#sign-in a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,98 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0a0f1f, #1c2b3a);
+    min-height: 100vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#sign-up {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+#sign-up h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #7ee0ff;
+}
+
+/* Labels */
+#sign-up label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Input Fields */
+#sign-up input[type="text"],
+#sign-up input[type="email"],
+#sign-up input[type="tel"],
+#sign-up input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 22px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.18);
+    color: #dff6ff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: 0.3s ease;
+}
+
+#sign-up input:focus {
+    border-color: #7ee0ff;
+    box-shadow: 0 0 12px rgba(126, 224, 255, 0.5);
+}
+
+/* Submit Button */
+#sign-up input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #53c8ff, #6fddff);
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#sign-up input[type="submit"]:hover {
+    background: linear-gradient(90deg, #8de9ff, #b4f4ff);
+    transform: translateY(-3px);
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    #sign-up {
+        width: 95%;
+        padding: 25px;
+    }
+    #sign-up h2 {
+        font-size: 26px;
+    }
+}
+
