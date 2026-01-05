@@ -154,6 +154,7 @@ app.post("/create-order", async (req, res) => {
 });
 
 // ================= SERVER =================
-server.listen(5000, () => {
-  console.log("🚀 Server running on port 5000");
+server.listen(process.env.PORT || 8080, () => {
+  console.log("🚀 Server started");
 });
+
